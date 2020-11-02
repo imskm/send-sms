@@ -9,6 +9,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"SendSMS\\": "src"
+			"SendSMS\\": "src/"
+		}
 	}
 }
