@@ -1,7 +1,7 @@
 # SendSMS
 SMS Sending php library for using Textlocal SMS provider
 
-```
+```php
 use SendSMS\Textlocal;
 
 $mode = false; // true = test, false = live
