@@ -1,0 +1,14 @@
+{
+	"name": "imskm/send-sms",
+	"description": "SMS sending library for textlocal sms api provider",
+	"keywords": ["library", "send sms", "textlocal api"],
+	"authors": [
+	],
+	"require": {
+		"php": ">=7.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"SendSMS\\": "src"
+	}
+}
