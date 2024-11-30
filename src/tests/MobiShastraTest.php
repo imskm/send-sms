@@ -30,7 +30,6 @@ class MobiShastraTest extends TestCase
 		$message = $otp .' is your OTP for Tripo account login. Please do not share this with anyone.';
 
 		$result = $sms->sendSms($numbers, $message, $senderid);
-		var_dump($result);
 
 		$this->assertNotFalse($result);
 		$this->assertStringContainsStringIgnoringCase($result, 'Success');
