@@ -69,13 +69,11 @@ class MobiShastra
 			throw new \Exception('Invalid date format. Use numeric epoch format');
 
 		$params = array(
-			'user'       	=> $this->username,
-			'pwd'       	=> $this->password,
 			'senderid'      => $sender,
 			'mobileno'      => implode(',', $numbers),
 			'msgtext'       => $message,
 			'priority'      => 'High',
-			'CountryCode'   => 'High',
+			'CountryCode'   => 'ALL',
 		);
 
 		$url = self::REQUEST_URL . "sendurl.aspx";
@@ -94,7 +92,8 @@ class MobiShastra
 	private function _sendRequest($command, $params = array())
 	{
 		// Create request string
-		$params['username'] = $this->username;
+		$params['user'] = $this->username;
+		$params['pwd'] 	= $this->password;
 
 		$this->lastRequest = $params;
 
@@ -118,6 +117,7 @@ class MobiShastra
 	private function _sendRequestCurl($url, $params)
 	{
 		$url .= '?'. http_build_query($params);
+		var_dump($url);exit;
 		// Initialize handle
 		$ch = curl_init($url);
 		curl_setopt_array($ch, array(
