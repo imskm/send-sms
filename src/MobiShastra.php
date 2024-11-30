@@ -117,7 +117,6 @@ class MobiShastra
 	private function _sendRequestCurl($url, $params)
 	{
 		$url .= '?'. http_build_query($params);
-		var_dump($url);exit;
 		// Initialize handle
 		$ch = curl_init($url);
 		curl_setopt_array($ch, array(
