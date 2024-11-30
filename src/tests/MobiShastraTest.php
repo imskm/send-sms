@@ -32,6 +32,6 @@ class MobiShastraTest extends TestCase
 		$result = $sms->sendSms($numbers, $message, $senderid);
 
 		$this->assertNotFalse($result);
-		$this->assertStringContainsStringIgnoringCase($result, 'Success');
+		$this->assertStringContainsStringIgnoringCase('successful', $result);
 	}
 }
