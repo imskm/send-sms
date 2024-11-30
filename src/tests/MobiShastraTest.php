@@ -26,7 +26,7 @@ class MobiShastraTest extends TestCase
 		$sms = new MobiShastra($username, $password, $senderid);
 
 		$otp = random_int(1000, 9999);
-		$numbers = ['971586619357'];
+		$numbers = ['9715866XXXX'];
 		$message = $otp .' is your OTP for Tripo account login. Please do not share this with anyone.';
 
 		$result = $sms->sendSms($numbers, $message, $senderid);
