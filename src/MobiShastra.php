@@ -68,6 +68,10 @@ class MobiShastra
 		if (!is_null($sched) && !is_numeric($sched))
 			throw new \Exception('Invalid date format. Use numeric epoch format');
 
+		if (is_string($numbers)) {
+			$numbers = [$numbers];
+		}
+
 		$params = array(
 			'senderid'      => $sender,
 			'mobileno'      => implode(',', $numbers),
